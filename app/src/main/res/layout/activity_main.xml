@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/screenshot__133_"
+        app:layout_constraintBottom_toTopOf="@+id/start_btn_fl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <FrameLayout
+        android:id="@+id/start_btn_fl"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="@dimen/main_screen_layout_padding"
+        android:background="@drawable/start_btn_ripple"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_primary"
+            android:text="@string/start"
+            android:layout_gravity="center"
+            android:textSize="@dimen/btn_txt_size"
+            android:textStyle="bold"/>
+
+    </FrameLayout>
+
+
+   <LinearLayout
+       android:id="@+id/bmi_history_ll"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/start_btn_fl">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <FrameLayout
+               android:id="@+id/Bmi_fl"
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:layout_marginEnd="20dp"
+               android:padding="@dimen/main_screen_layout_padding"
+               android:background="@drawable/item_circular_color_assent_bg"
+               app:layout_constraintTop_toBottomOf="@id/start_btn_fl"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintBottom_toBottomOf="@id/calculator_txt">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:text="BMI"
+                   android:layout_gravity="center"
+                   android:textSize="@dimen/btn_txt_size"
+                   android:textStyle="bold"/>
+
+           </FrameLayout>
+
+           <TextView
+               android:id="@+id/calculator_txt"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:text="Calculate"
+               android:layout_marginEnd="20dp"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:textSize="@dimen/btn_txt_size"
+               android:textStyle="bold"/>
+
+       </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/history_fl"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:padding="@dimen/main_screen_layout_padding"
+            android:background="@drawable/item_circular_color_assent_bg"
+            app:layout_constraintTop_toBottomOf="@id/start_btn_fl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/calculator_txt">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background ="@drawable/baseline_calendar_month_24"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/history_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="History"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/btn_txt_size"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseFinishPage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_finish"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/toolbarStyle"
+        android:background="@color/colorAssent"
+        android:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/congrats_txt"
+        />
+
+
+    <TextView
+        android:id="@+id/congrats_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Congradulations"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_finish"
+        app:layout_constraintStart_toStartOf= "parent"
+        app:layout_constraintEnd_toEndOf= "parent" />
+
+    <ImageView
+        android:id="@+id/complete_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/completed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congrats_txt" />
+
+    <TextView
+        android:id="@+id/exercise_finish_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text=" 7 Minute Workout"
+        android:textSize="@dimen/btn_txt_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/complete_iv"
+        app:layout_constraintStart_toStartOf= "parent"
+        app:layout_constraintEnd_toEndOf= "parent"/>
+
+    <Button
+        android:id="@+id/finish_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="80dp"
+        android:text="Finish"
+        android:backgroundTint="@color/colorAssent"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_finish_txt"
+        app:layout_constraintStart_toStartOf= "parent"
+        app:layout_constraintEnd_toEndOf= "parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
